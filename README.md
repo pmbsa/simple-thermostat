@@ -2,10 +2,10 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
+> **Note**: This is a community-maintained fork of the [original simple-thermostat](https://github.com/nervetattoo/simple-thermostat) by [@nervetattoo](https://github.com/nervetattoo), as the original repository is no longer actively maintained.
+
 A different take on the thermostat card for Home Assistant Lovelace UI.
 The aim is to provide a card with simpler interactions that are easier to use and take up less space, as well as provide more modularity to tweak the card. For example the abiltity to embed sensor values that are relevant to your thermostat (like humidity, energy usage, hours on +++).
-
-<a href="https://www.buymeacoffee.com/nervetattoo"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nervetattoo&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
 
 ![Example thermostat](https://github.com/nervetattoo/simple-thermostat/raw/master/thermostat-card.png)
 
@@ -24,15 +24,31 @@ header: false
 control: false
 ```
 
-## Note about 2.0 release
+## Migration from Original Repository
 
-The 2.0 release is most likely a breaking change for the majority of users.
-Make sure you read the release notes and inspect the new configuration format.
-It offers more flexibility and features as well as a number of bug fixes.
+If you're migrating from the [original repository](https://github.com/nervetattoo/simple-thermostat):
+
+### Version 3.0.0 Changes
+- Updated to Lit 3.x (from Lit 2.x)
+- Updated all dependencies to latest versions
+- No configuration changes required - your existing card config will continue to work
+- New repository location for updates
+
+### Switching to This Fork
+
+**Via HACS:**
+1. Remove the old integration (⋮ menu → Remove)
+2. Add this repository as a custom repository: `https://github.com/pmbsa/simple-thermostat`
+3. Install from HACS
+
+**Manual:**
+1. Download `simple-thermostat.js` from the [latest release](https://github.com/pmbsa/simple-thermostat/releases/latest)
+2. Replace the existing file in your `www` folder
+3. Clear browser cache
 
 ## Requirements
 
-Home Assistant 0.84 or higher
+Home Assistant 2021.11.0 or higher
 
 ## Installation
 
@@ -45,7 +61,7 @@ Home Assistant 0.84 or higher
 
 <details>
    <summary>Manual install</summary>
-1. Download the `simple-thermostat.js` from the [latest release](https://github.com/nervetattoo/simple-thermostat/releases/latest) and store it in your `configuration/www` folder.
+1. Download the `simple-thermostat.js` from the [latest release](https://github.com/pmbsa/simple-thermostat/releases/latest) and store it in your `configuration/www` folder.
    _Previously you could download the source file from Github but starting from the 0.14 release that is no longer possible. If you try to do so it will crash_
 2. Configure Lovelace to load the card:
 

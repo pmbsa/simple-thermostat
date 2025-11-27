@@ -4,3 +4,5 @@ simple-thermostat.js
 .nvmrc
 build dist
 dist
+.idea
+package-lock.json

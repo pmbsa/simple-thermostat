@@ -1,5 +1,5 @@
 import renderInfoItem from '../components/infoItem'
-import { render } from 'lit-html'
+import { render } from 'lit'
 
 test('return undefined on hide and no state', () => {
   const firstResult = renderInfoItem({

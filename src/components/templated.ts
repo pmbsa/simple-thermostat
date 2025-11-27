@@ -1,6 +1,6 @@
 import * as Sqrl from 'squirrelly'
-import { html } from 'lit-html'
-import { unsafeHTML } from 'lit-html/directives/unsafe-html.js'
+import { html } from 'lit'
+import { unsafeHTML } from 'lit/directives/unsafe-html.js'
 import formatNumber from '../formatNumber'
 import renderInfoItem from './infoItem'
 

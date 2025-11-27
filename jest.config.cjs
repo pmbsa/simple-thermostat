@@ -5,16 +5,14 @@ module.exports = {
     '**/?(*.)+(spec|test).+(ts|tsx|js)',
   ],
   preset: 'ts-jest',
+  testEnvironment: 'jsdom',
   transform: {
     '^.+\\.(j|t)s?$': 'ts-jest',
   },
-  transformIgnorePatterns: ['node_modules/(?!(lit-html))'],
-  runner: 'jest-electron/runner',
-  testEnvironment: 'jest-electron/environment',
+  transformIgnorePatterns: ['node_modules/(?!(lit|@lit))'],
   globals: {
     'ts-jest': {
       tsconfig: {
-        // allow js in typescript
         allowJs: true,
         rootDir: './',
       },

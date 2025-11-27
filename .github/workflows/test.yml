@@ -11,17 +11,17 @@ on:
 
 jobs:
   build:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
         with:
-          node-version: 14.x
-      - name: yarn install and test
+          node-version: 20.x
+      - name: npm install and test
         run: |
-          yarn install
-          yarn test
+          npm install --legacy-peer-deps
+          npm test
         env:
           CI: true

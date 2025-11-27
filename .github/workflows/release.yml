@@ -2,30 +2,30 @@
 name: Release
 on:
   push:
-    branches:
-      - master
-      - next
-      - beta
+    tags:
+      - 'v*'
 jobs:
   release:
-    name: Release
-    runs-on: ubuntu-18.04
+    name: Build and Release
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          persist-credentials: false
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
-      - name: Install dependencies
+          node-version: 20
+
+      - name: Install and Build
         run: |
-          yarn install
-          yarn build
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+          npm install --legacy-peer-deps
+          npm run build
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/simple-thermostat.js
+            dist/simple-thermostat.debug.js
+          generate_release_notes: true

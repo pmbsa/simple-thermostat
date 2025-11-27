@@ -1,4 +1,4 @@
-import { html } from 'lit-html'
+import { html } from 'lit'
 import formatNumber from '../formatNumber'
 import { LooseObject } from '../types'
 

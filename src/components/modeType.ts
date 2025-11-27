@@ -1,4 +1,4 @@
-import { html } from 'lit-html'
+import { html } from 'lit'
 import { ControlMode, HVAC_MODES } from '../types'
 
 interface ModeTypeOptions {

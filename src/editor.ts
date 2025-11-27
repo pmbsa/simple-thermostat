@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html } from 'lit'
 import styles from './styles.css'
 import fireEvent from './fireEvent'
 import { name } from '../package.json'
@@ -26,7 +26,7 @@ const OptionsStepLayout = ['column', 'row']
 const includeDomains = ['climate']
 
 const GithubReadMe =
-  'https://github.com/nervetattoo/simple-thermostat/blob/master/README.md'
+  'https://github.com/pmbsa/simple-thermostat/blob/master/README.md'
 
 const stub = {
   header: {},

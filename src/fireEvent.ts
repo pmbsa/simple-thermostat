@@ -1,4 +1,4 @@
-import { LitElement } from 'lit-element'
+import { LitElement } from 'lit'
 import { LooseObject } from './types'
 
 export interface HAEvent extends Event {

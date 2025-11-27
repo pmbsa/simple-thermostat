@@ -1,4 +1,4 @@
-import { html, nothing } from 'lit-html'
+import { html, nothing } from 'lit'
 import { LooseObject } from '../types'
 import { HeaderData } from '../config/header'
 
